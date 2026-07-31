@@ -1,0 +1,135 @@
+═══════════════════════════════════════════════════════════════════
+  CÓMO ORGANIZAR LOS ARCHIVOS DESCARGADOS
+═══════════════════════════════════════════════════════════════════
+
+1. CREA UNA CARPETA EN TU DESKTOP:
+   C:\Users\TuUsuario\Desktop\transcription-app
+
+2. DESCARGA TODOS ESTOS ARCHIVOS EN ESA CARPETA:
+
+   📄 requirements.txt
+   📄 main.py
+   📄 main_window.py
+   📄 transcription_service.py
+   📄 translation_service.py
+   📄 language_detection.py
+   📄 video_processor.py
+   📄 setup.ps1
+   📄 instalar.bat          ← Click derecho, Ejecutar (si setup.ps1 falla)
+   📄 ejecutar.bat          ← Para ejecutar la app después
+   📄 README.md
+   📄 ESTRUCTURA_ARCHIVOS.txt (este archivo)
+
+3. LA CARPETA DEBE VERSE ASÍ:
+
+   transcription-app/
+   ├── requirements.txt
+   ├── setup.ps1
+   ├── instalar.bat
+   ├── ejecutar.bat
+   ├── README.md
+   ├── ESTRUCTURA_ARCHIVOS.txt
+   ├── main.py
+   ├── main_window.py
+   ├── transcription_service.py
+   ├── translation_service.py
+   ├── language_detection.py
+   ├── video_processor.py
+   └── (Después de instalar se crearán automáticamente:)
+       ├── venv/          (ambiente virtual)
+       └── transcriptor.log
+
+═══════════════════════════════════════════════════════════════════
+  INSTALACIÓN PASO A PASO
+═══════════════════════════════════════════════════════════════════
+
+PASO 1: INSTALAR PYTHON
+   - Ve a: https://www.python.org/downloads/
+   - Descarga Python 3.10 o superior
+   - ¡IMPORTANTE!: Marca "Add Python to PATH" en la instalación
+   - Abre PowerShell y verifica: python --version
+
+PASO 2: INSTALAR FFMPEG
+   - Ve a: https://ffmpeg.org/download.html
+   - Descarga para Windows
+   - Extrae la carpeta
+   - Agrega \bin al PATH de Windows
+   - Verifica: Abre PowerShell y ejecuta: ffmpeg -version
+
+PASO 3: INSTALAR DEPENDENCIAS DE PYTHON
+   
+   OPCIÓN A (Recomendado - automático):
+   - Click derecho en "setup.ps1"
+   - "Abrir con" → PowerShell
+   - Espera 20-30 minutos
+   
+   OPCIÓN B (Si Opción A falla):
+   - Click derecho en "instalar.bat"
+   - "Ejecutar como administrador"
+   - Espera 20-30 minutos
+
+PASO 4: EJECUTAR LA APLICACIÓN
+   
+   OPCIÓN A (Más fácil):
+   - Click derecho en "ejecutar.bat"
+   - "Ejecutar como administrador"
+   
+   OPCIÓN B (PowerShell manual):
+   - Abre PowerShell en la carpeta
+   - Ejecuta: .\venv\Scripts\activate
+   - Ejecuta: python main.py
+
+═══════════════════════════════════════════════════════════════════
+  SOLUCIÓN DE PROBLEMAS
+═══════════════════════════════════════════════════════════════════
+
+❌ "No se reconoce el comando python"
+   → Python no está en PATH
+   → Reinstala Python marcando "Add Python to PATH"
+
+❌ "FFmpeg no encontrado"
+   → Instala FFmpeg desde https://ffmpeg.org/download.html
+   → O con Chocolatey: choco install ffmpeg
+
+❌ "Módulo no encontrado"
+   → Re-ejecuta: instalar.bat o setup.ps1
+   → Espera a que termine completamente
+
+❌ "Acceso denegado"
+   → Ejecuta como Administrador (click derecho)
+
+❌ La app no abre / se cierra rápido
+   → Abre PowerShell y ejecuta:
+      .\venv\Scripts\activate
+      python main.py
+   → Esto te mostrará el error real
+
+❌ Uso muy alto de RAM/CPU
+   → Es normal en primer uso
+   → Cierra otras aplicaciones pesadas
+   → El programa se normalizará cuando termine
+
+═══════════════════════════════════════════════════════════════════
+  PRIMER USO
+═══════════════════════════════════════════════════════════════════
+
+IMPORTANTE: En el PRIMER USO, la aplicación descargará:
+   - Modelo Whisper (~140 MB)
+   - Modelos de traducción (~200 MB)
+   - Pytorch/Torch (~2 GB)
+
+TOTAL: ~2.5 GB descargados automáticamente
+TIEMPO: 10-30 minutos depende de tu internet
+
+Esto solo ocurre UNA VEZ. Después será mucho más rápido.
+
+═══════════════════════════════════════════════════════════════════
+  ¿NECESITAS AYUDA?
+═══════════════════════════════════════════════════════════════════
+
+1. Abre el archivo "transcriptor.log" para ver errores detallados
+2. Sigue los pasos del README.md
+3. Verifica que todos los archivos .py estén en la carpeta principal
+4. Prueba reinstalar con: instalar.bat
+
+═══════════════════════════════════════════════════════════════════

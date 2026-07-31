@@ -1,0 +1,24 @@
+# Transcripción - Whisper
+openai-whisper==20250625
+
+# Deep Learning Framework - Versiones que EXISTEN
+torch==2.2.2
+torchaudio==2.2.2
+
+# Procesamiento de audio/video
+pydub==0.25.1
+librosa==0.10.0
+
+# Traducción offline
+argostranslate==1.9.3
+sentencepiece==0.2.1
+
+# Detección de idioma
+langdetect==1.0.9
+
+# Interfaz gráfica
+PyQt6==6.6.1
+
+# Utilidades
+tqdm==4.66.1
+numpy==1.24.3

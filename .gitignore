@@ -1,0 +1,30 @@
+# Entorno virtual
+venv/
+env/
+.venv/
+
+# PyInstaller
+build/
+dist/
+*.manifest
+build_log.txt
+
+# Instalador generado
+Instalador/
+*.exe
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Logs y temporales
+*.log
+*.wav
+temp_audio.wav
+
+# Editores / SO
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
