@@ -86,7 +86,7 @@ transcription-app/
 ### Entorno de desarrollo
 
 ```powershell
-git clone https://github.com/USUARIO/transcriptor-videos.git
+git clone https://github.com/Abiezerk/Transcriptor.git
 cd transcriptor-videos
 
 python -m venv venv
